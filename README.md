@@ -15,7 +15,7 @@
 ### Basic Usage
 
 ```typescript
-import { Config as AbstractConfig, Definition, Property } from 'type-cfg';
+import AbstractConfig, { Definition, Property } from 'type-cfg';
 
 @Definition()
 class Config extends AbstractConfig {

@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import * as assert from 'assert';
 
-import { Config as AbstractConfig, Definition, Property, registerEnumType } from '../src';
+import AbstractConfig, { Definition, Property, registerEnumType } from '../src';
 
 enum Flag {
   A = 'A',
