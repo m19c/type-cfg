@@ -1,4 +1,4 @@
-const truthy = ['yes', 'y', '1'];
+const truthy = ['true', 'yes', 'y', '1'];
 
 export function toBoolean(value: any): boolean {
   if (typeof value === 'boolean') {

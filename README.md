@@ -55,3 +55,4 @@ if (config.environment === 'development') {
 - [Basic Usage](https://github.com/m19c/type-cfg/blob/master/examples/simple.ts)
 - [Arrays](https://github.com/m19c/type-cfg/blob/master/examples/array.ts)
 - [Nested](https://github.com/m19c/type-cfg/blob/master/examples/nested.ts)
+- [TypeDI](https://github.com/m19c/type-cfg/blob/master/examples/typedi.ts)
