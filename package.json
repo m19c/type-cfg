@@ -1,5 +1,5 @@
 {
-  "name": "type-config",
+  "name": "type-cfg",
   "version": "1.0.0-rc.1",
   "description": "",
   "main": "dist/index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m19c/type-config.git"
+    "url": "git+https://github.com/m19c/type-cfg.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/m19c/type-config/issues"
+    "url": "https://github.com/m19c/type-cfg/issues"
   },
-  "homepage": "https://github.com/m19c/type-config#readme",
+  "homepage": "https://github.com/m19c/type-cfg#readme",
   "devDependencies": {
     "@types/node": "^12.0.4",
     "@typescript-eslint/eslint-plugin": "^1.9.0",

@@ -1,9 +1,9 @@
-# type-config
+# type-cfg
 
 ## Usage
 
 1. Install the node package:
-   `npm install type-config --save` OR `yarn add type-config`
+   `npm install type-cfg --save` OR `yarn add type-cfg`
 1. You also need to install `reflect-metadata` shim:
    `npm install reflect-metadata --save` OR `yarn add reflect-metadata`
 1. Add `reflect-metadata` to your app-entry file:
@@ -15,7 +15,7 @@
 ### Basic Usage
 
 ```typescript
-import { Config as AbstractConfig, Definition, Property } from 'type-config';
+import { Config as AbstractConfig, Definition, Property } from 'type-cfg';
 
 @Definition()
 class Config extends AbstractConfig {
@@ -52,6 +52,6 @@ if (config.environment === 'development') {
 
 ## Examples
 
-- [Basic Usage](https://github.com/m19c/type-config/blob/master/examples/simple.ts)
-- [Arrays](https://github.com/m19c/type-config/blob/master/examples/array.ts)
-- [Nested](https://github.com/m19c/type-config/blob/master/examples/nested.ts)
+- [Basic Usage](https://github.com/m19c/type-cfg/blob/master/examples/simple.ts)
+- [Arrays](https://github.com/m19c/type-cfg/blob/master/examples/array.ts)
+- [Nested](https://github.com/m19c/type-cfg/blob/master/examples/nested.ts)
