@@ -1,5 +1,4 @@
 import 'reflect-metadata';
-import * as assert from 'assert';
 
 import AbstractConfig, { Definition, Property, registerEnumType } from '../src';
 
