@@ -12,6 +12,24 @@
 
 ## Documentation
 
+### Basic Usage
+
+```typescript
+import { Config as AbstractConfig, Definition, Property } from 'type-config';
+
+@Definition()
+class Config extends AbstractConfig {
+  @Property({ source: 'NODE_ENV' })
+  environment: string;
+}
+
+const config = new Config();
+
+if (config.environment === 'development') {
+  // ...
+}
+```
+
 ### Decorators
 
 #### `@Definition`
