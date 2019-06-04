@@ -25,6 +25,8 @@ export function cast(
     result = toDate(raw);
   } else if (type === Boolean) {
     result = toBoolean(raw);
+  } else if (type === Symbol) {
+    result = Symbol(raw);
   } else if (isArray && delimiter && typeof raw === 'string') {
     result = raw.split(delimiter).map(item => cast(item, { type: type[0] }));
   }
