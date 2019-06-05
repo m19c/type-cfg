@@ -1,6 +1,6 @@
 import { ReflectionMissingError } from '../errors/ReflectionMissingError';
 
-export function ensureReflectMetadataExists() {
+export function ensureReflectMetadataExists(): void {
   if (
     typeof Reflect !== 'object' ||
     typeof Reflect.decorate !== 'function' ||
@@ -10,6 +10,6 @@ export function ensureReflectMetadataExists() {
   }
 }
 
-export function getGlobalVariable() {
+export function getGlobalVariable(): typeof global {
   return global;
 }

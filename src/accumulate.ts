@@ -6,9 +6,11 @@ import { CannotCastToTypeError } from './errors/CannotCastToTypeError';
 const STANDARD_DELIMITER = ',';
 const metadataStorage = getMetadataStorage();
 
-export type Haystack = { [key: string]: any | undefined };
+export interface Haystack {
+  [key: string]: any | undefined;
+}
 
-export function accumulate(item: any, haystack: Haystack = process.env) {
+export function accumulate<T extends any>(item: T, haystack: Haystack = process.env): T {
   const definition = metadataStorage.findDefinitionByInstance(item);
 
   if (!definition) {
@@ -22,6 +24,7 @@ export function accumulate(item: any, haystack: Haystack = process.env) {
 
     const child = metadataStorage.findDefinitionByValue(type);
     if (child) {
+      // eslint-disable-next-line no-param-reassign,new-cap
       item[property.name] = new type();
       accumulate(item[property.name], haystack);
       return;
@@ -37,13 +40,15 @@ export function accumulate(item: any, haystack: Haystack = process.env) {
     }
 
     if (!isValueAvailable && isDefaultValueAvailable) {
+      // eslint-disable-next-line no-param-reassign
       item[property.name] = property.defaultValue;
       return;
     }
 
     try {
+      // eslint-disable-next-line no-param-reassign
       item[property.name] = cast(rawValue, {
-        type: type,
+        type,
         isArray: property.determineTypeOptions.isArray,
         delimiter: property.delimiter || STANDARD_DELIMITER,
       });

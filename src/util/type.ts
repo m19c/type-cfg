@@ -3,7 +3,7 @@ import { NoExplicitTypeError } from '../errors/NoExplicitTypeError';
 import { CannotDetermineTypeError } from '../errors/CannotDetermineTypeError';
 
 interface CreateTypeDeterminerFunctionOptions {
-  prototype: Object;
+  prototype: Record<string, any>;
   propertyKey: string;
   typeFunction?: TypeFunction;
 }
@@ -46,7 +46,8 @@ export function createTypeDeterminerFunction({
       },
       determineTypeOptions,
     };
-  } else if (designType) {
+  }
+  if (designType) {
     return {
       determineType: () => designType,
       determineTypeOptions,

@@ -11,16 +11,21 @@ export interface PropertyOptions {
   defaultValue?: PropertyMetadataDefaultValue;
 }
 
+// eslint-disable-next-line import/export
 export function Property(): PropertyDecorator;
+// eslint-disable-next-line import/export
 export function Property(options: PropertyOptions): PropertyDecorator;
+// eslint-disable-next-line import/export
 export function Property(typeFunction: TypeFunction): PropertyDecorator;
+// eslint-disable-next-line import/export
 export function Property(typeFunction: TypeFunction, options: PropertyOptions): PropertyDecorator;
 
+// eslint-disable-next-line import/export
 export function Property(
   typeFunctionOrOptions?: TypeFunction | PropertyOptions,
   maybeOptions?: PropertyOptions
 ): PropertyDecorator {
-  return function captureConfigPropertyTarget(prototype, propertyKey) {
+  return function captureConfigPropertyTarget(prototype, propertyKey): void {
     const name = propertyKey.toString();
     const { options, typeFunction } = resolveTypeDecoratorArguments(
       typeFunctionOrOptions,

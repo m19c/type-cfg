@@ -1,7 +1,5 @@
 import { TypeFunction } from '../decorators/types';
 
-export function getTypeDecoratorArguments<T extends object>() {}
-
 export interface ResolvedTypeDecoratorParams<T> {
   options: Partial<T>;
   typeFunction?: TypeFunction;
