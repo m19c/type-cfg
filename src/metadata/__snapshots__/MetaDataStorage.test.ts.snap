@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`metadata/MetaDataStorage collect collectDefinitionMetadata 1`] = `
+MetadataStorage {
+  "definitions": Array [
+    Object {
+      "name": "Test",
+      "target": [Function],
+    },
+  ],
+  "enums": Array [],
+  "properties": Array [],
+}
+`;
+
+exports[`metadata/MetaDataStorage collect collectEnumMetadata 1`] = `
+MetadataStorage {
+  "definitions": Array [],
+  "enums": Array [
+    Object {
+      "name": "Test",
+      "value": Object {
+        "A": 1,
+        "B": 2,
+      },
+    },
+  ],
+  "properties": Array [],
+}
+`;
+
+exports[`metadata/MetaDataStorage collect collectPropertyMetadata 1`] = `
+MetadataStorage {
+  "definitions": Array [],
+  "enums": Array [],
+  "properties": Array [
+    Object {
+      "defaultValue": null,
+      "delimiter": null,
+      "determineType": [Function],
+      "determineTypeOptions": Object {
+        "isArray": true,
+      },
+      "name": "Test",
+      "required": false,
+      "source": "TEST_ENV_VAR",
+      "target": [Function],
+    },
+  ],
+}
+`;

@@ -47,6 +47,7 @@ export function createTypeDeterminerFunction({
       determineTypeOptions,
     };
   }
+
   if (designType) {
     return {
       determineType: () => designType,

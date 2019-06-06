@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`util/arg resolveTypeDecoratorArguments returns an object with options if the first argument is not a function 1`] = `
+Object {
+  "options": Object {},
+}
+`;
+
+exports[`util/arg resolveTypeDecoratorArguments returns the typeFunction as well as the options 1`] = `
+Object {
+  "options": Object {},
+  "typeFunction": [Function],
+}
+`;
