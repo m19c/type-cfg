@@ -62,3 +62,4 @@ typings/
 
 .vscode/
 junit.xml
+.DS_Store

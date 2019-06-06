@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/m19c/type-cfg/raw/master/logo.svg" width="200px" />
+  <img src="https://github.com/m19c/type-cfg/raw/master/logo.png" width="200px" />
   <br />
   <br />
   <h1>type-cfg</h1>
