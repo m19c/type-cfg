@@ -1,8 +1,6 @@
 <div align="center">
   <img src="https://github.com/m19c/type-cfg/raw/master/logo.png" width="200px" />
   <br />
-  <br />
-  <h1>type-cfg</h1>
 </div>
 
 Declare your configuration schema using classes and decorators.
