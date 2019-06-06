@@ -4,5 +4,11 @@ export function toNumber(value: any): number {
     return value;
   }
 
-  return value * 1;
+  const result = value * 1;
+
+  if (Number.isNaN(result)) {
+    throw new Error('invalid number');
+  }
+
+  return result;
 }

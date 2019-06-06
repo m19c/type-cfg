@@ -28,7 +28,7 @@ export class MetadataStorage {
     return this.definitions.filter(definition => value === definition.target).shift() || null;
   }
 
-  collectConfigPropertyMetadata(item: PropertyMetadata): void {
+  collectPropertyMetadata(item: PropertyMetadata): void {
     this.properties.push(item);
   }
 

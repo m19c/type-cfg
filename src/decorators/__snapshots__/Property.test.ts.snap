@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Property calls the metadata storage collector 1`] = `
+Array [
+  Object {
+    "defaultValue": undefined,
+    "delimiter": null,
+    "determineType": [Function],
+    "determineTypeOptions": Object {
+      "isArray": false,
+    },
+    "name": "test",
+    "required": true,
+    "source": null,
+    "target": [Function],
+  },
+]
+`;

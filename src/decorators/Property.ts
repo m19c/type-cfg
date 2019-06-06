@@ -32,7 +32,7 @@ export function Property(
       maybeOptions
     );
 
-    getMetadataStorage().collectConfigPropertyMetadata({
+    getMetadataStorage().collectPropertyMetadata({
       name,
       target: prototype.constructor,
       ...createTypeDeterminerFunction({

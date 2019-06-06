@@ -8,9 +8,9 @@
     "build": "npm-run-all build:clean build:transpile",
     "build:transpile": "tsc",
     "build:clean": "rimraf ./dist/*",
-    "test": "npm-run-all test:jest test:lint",
-    "test:jest": "JEST_JUNIT_OUTPUT=coverage/junit.xml jest --coverage",
-    "test:jest:watch": "JEST_JUNIT_OUTPUT=coverage/junit.xml jest --watch",
+    "test": "npm-run-all test:unit test:lint",
+    "test:unit": "JEST_JUNIT_OUTPUT=coverage/junit.xml jest --coverage",
+    "test:unit:watch": "JEST_JUNIT_OUTPUT=coverage/junit.xml jest --watch",
     "test:lint": "eslint src/**/*.ts"
   },
   "repository": {
@@ -76,6 +76,9 @@
       "default",
       "./node_modules/jest-junit"
     ],
-    "coverageDirectory": "<rootDir>/coverage"
+    "coverageDirectory": "<rootDir>/coverage",
+    "setupFiles": [
+      "./.jest.setup.ts"
+    ]
   }
 }

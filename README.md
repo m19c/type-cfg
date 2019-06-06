@@ -1,6 +1,19 @@
-# type-cfg
+<div align="center">
+  <img src="https://github.com/m19c/type-cfg/raw/master/logo.svg" width="200px" />
+  <br />
+  <br />
+  <h1>type-cfg</h1>
+</div>
 
-## Usage
+Declare your configuration schema using classes and decorators.
+
+## Motivation
+
+We all know the pain that comes with using environment variables in your application. Since each variable is a string you have to cast the content of it to actually use it.
+
+With _type-cfg_ there is just one declartion for your entire application: one config to rule them all.
+
+## Installation
 
 1. Install the node package:
    `npm install type-cfg --save` OR `yarn add type-cfg`
@@ -15,10 +28,10 @@
 ### Basic Usage
 
 ```typescript
-import AbstractConfig, { Definition, Property } from 'type-cfg';
+import TypeConfig, { Definition, Property } from 'type-cfg';
 
 @Definition()
-class Config extends AbstractConfig {
+class Config extends TypeConfig {
   @Property({ source: 'NODE_ENV' })
   environment: string;
 }
@@ -30,29 +43,80 @@ if (config.environment === 'development') {
 }
 ```
 
-### Decorators
-
-#### `@Definition`
-
-...
-
-#### `@Property`
-
-...
-
-### Accumulate
-
-#### ...by using a function call
-
-...
-
-#### ...by using the abstract class
-
-...
-
 ## Examples
 
 - [Basic Usage](https://github.com/m19c/type-cfg/blob/master/examples/simple.ts)
 - [Arrays](https://github.com/m19c/type-cfg/blob/master/examples/array.ts)
 - [Nested](https://github.com/m19c/type-cfg/blob/master/examples/nested.ts)
 - [TypeDI](https://github.com/m19c/type-cfg/blob/master/examples/typedi.ts)
+
+### Decorators
+
+#### `@Definition`
+
+Scope: Class Decorator
+
+**Configuration**
+
+-
+
+**Usage**
+
+```typescript
+@Definition();
+```
+
+#### `@Property`
+
+Scope: Property Decorator
+
+**Configuration**
+
+| Property       | Required | Default | Description                                                                                     |
+| -------------- | -------- | ------- | ----------------------------------------------------------------------------------------------- |
+| `source`       | ❌       | -       | The environment variable / object key as a string of the value you want to acquire              |
+| `delimiter`    | ❌       | `,`     | The delimiter used to split the value into an array                                             |
+| `required`     | ❌       | `true`  | Marks the property as required                                                                  |
+| `defaultValue` | ❌       | -       | The default value. Note that the `defaultValue` will be applied even if the value is `required` |
+
+**Usage**
+
+```typescript
+@Property();
+@Property(options: PropertyOptions);
+@Property(typeFunction: TypeFunction);
+@Property(typeFunction: TypeFunction, options: PropertyOptions);
+```
+
+### Accumulate
+
+Once your configuration is decorated you can _accumulate_ it...
+
+#### ...by using a function call
+
+```typescript
+import { accumulate } from 'type-cfg';
+
+const config = new MyConfig();
+accumulate(config);
+
+// ...
+```
+
+#### ...by using the abstract class
+
+```typescript
+import TypeConfig, { Definition, Property } from 'type-cfg';
+
+class MyConfig extends TypeConfig {
+  // ...
+}
+
+const config = new MyConfig();
+
+// ...
+```
+
+## Thank you
+
+A huge thanks goes to the creators of _TypeGraphQL_ and _TypeORM_. They gave me the inspiration to not only manage GraphQL schemas and Database relations but also configurations.
