@@ -4,7 +4,6 @@
   <br />
   <p>Declare your configuration schema using classes and decorators.</p>
   <br />
-  <br />
   <a href="https://travis-ci.org/m19c/type-cfg">
     <img src="https://travis-ci.org/m19c/type-cfg.svg?branch=master">
   </a>
