@@ -1,6 +1,6 @@
 {
   "name": "type-cfg",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -49,36 +49,16 @@
     "reflect-metadata": "^0.1.13"
   },
   "jest": {
-    "coveragePathIgnorePatterns": [
-      "node_modules"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.ts"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/?(*.)(spec|test).ts?(x)"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"
-    ],
+    "coveragePathIgnorePatterns": ["node_modules"],
+    "collectCoverageFrom": ["src/**/*.ts"],
+    "testMatch": ["<rootDir>/src/**/?(*.)(spec|test).ts?(x)"],
+    "testPathIgnorePatterns": ["<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "reporters": [
-      "default",
-      "./node_modules/jest-junit"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "reporters": ["default", "./node_modules/jest-junit"],
     "coverageDirectory": "<rootDir>/coverage",
-    "setupFiles": [
-      "./.jest.setup.ts"
-    ]
+    "setupFiles": ["./.jest.setup.ts"]
   }
 }
