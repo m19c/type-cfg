@@ -3,6 +3,20 @@
   <br />
   <br />
   <p>Declare your configuration schema using classes and decorators.</p>
+  <br />
+  <br />
+  <a href="https://travis-ci.org/m19c/type-cfg">
+    <img src="https://travis-ci.org/m19c/type-cfg.svg?branch=master">
+  </a>
+  <a href="https://badge.fury.io/js/type-cfg">
+    <img src="https://badge.fury.io/js/type-cfg.svg">
+  </a>
+  <a href="https://david-dm.org/m19c/type-cfg">
+    <img src="https://david-dm.org/m19c/type-cfg.svg">
+  </a>
+  <a href="https://codecov.io/gh/m19c/type-cfg">
+    <img src="https://img.shields.io/codecov/c/github/m19c/type-cfg.svg">
+  </a>
 </div>
 
 ## Motivation

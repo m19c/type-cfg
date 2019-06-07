@@ -48,6 +48,7 @@ export function createTypeDeterminerFunction({
     };
   }
 
+  /* istanbul ignore next */
   if (designType) {
     return {
       determineType: () => designType,
@@ -55,5 +56,6 @@ export function createTypeDeterminerFunction({
     };
   }
 
+  /* istanbul ignore next */
   throw new CannotDetermineTypeError(prototype.constructor.name, propertyKey);
 }

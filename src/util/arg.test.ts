@@ -9,5 +9,9 @@ describe('util/arg', () => {
     test('returns the typeFunction as well as the options', () => {
       expect(arg.resolveTypeDecoratorArguments(() => String, {})).toMatchSnapshot();
     });
+
+    test('returns an empty options object', () => {
+      expect(arg.resolveTypeDecoratorArguments(() => String(), undefined)).toMatchSnapshot();
+    });
   });
 });

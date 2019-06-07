@@ -16,4 +16,9 @@ describe('cast/toBoolean', () => {
       expect(toBoolean(tc.value)).toBe(tc.expected);
     });
   });
+
+  test('returns the original boolean value', () => {
+    expect(toBoolean(true)).toBeTruthy();
+    expect(toBoolean(false)).toBeFalsy();
+  });
 });

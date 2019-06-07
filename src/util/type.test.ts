@@ -1,7 +1,6 @@
 import * as type from './type';
 import { Property } from '../decorators/Property';
 import { NoExplicitTypeError } from '../errors/NoExplicitTypeError';
-import { CannotDetermineTypeError } from '../errors/CannotDetermineTypeError';
 
 describe('util/type', () => {
   describe('createTypeDeterminerFunction', () => {
